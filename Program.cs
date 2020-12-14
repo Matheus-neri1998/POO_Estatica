@@ -18,12 +18,27 @@ namespace POO_Estatica
             Console.WriteLine( Math.Pow(2, 5) );
             // acima exemplo de potenciação. // primeiro número é ele próprio, e o segundo é expoente
 
-            Console.WriteLine("Digite um valor: ");
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            Console.WriteLine("Digite um valor: "); // valor em reais
+            
             obj.Conversor.valorUsuario = float.Parse( Console.ReadLine() );
 
-           Console.WriteLine(  obj.Conversor.ConverterDolarParaReal() );
+            Console.WriteLine(  obj.Conversor.ConverterDolarParaReal() );
 
-           Console.WriteLine(  obj.Conversor.ConverterRealParaDolar() );
+            Console.WriteLine(  obj.Conversor.ConverterRealParaDolar() );
+            Console.ResetColor();
+            Console.WriteLine("--------------------------");
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            Console.WriteLine("Digite um valor: "); // valor em euro
+            obj.Conversor.valorUsername = float.Parse( Console.ReadLine());
+
+            Console.WriteLine( obj.Conversor.ConverterEuroParaReal() );
+ 
+            Console.WriteLine( obj.Conversor.ConverterRealParaEuro() );
+            Console.ResetColor();
 
             // Este método também tem quer ser static na sua declaração
             Testar();
